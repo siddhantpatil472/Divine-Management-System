@@ -1,0 +1,1 @@
+export default function Footer(){return <footer className="footer"><div><h3>Divine Temple Management System</h3><p>Real temple information • Online pilgrimage services • Secure records</p></div><p>© 2026 Divine Management System</p></footer>}

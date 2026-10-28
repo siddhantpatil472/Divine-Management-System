@@ -1,0 +1,3 @@
+import { Link } from "react-router-dom";
+import { temples } from "../data/temples";
+export default function Temples(){return <section className="section page"><div className="section-heading"><p className="eyebrow">DIVINE TEMPLES</p><h1>Explore Sacred Temples</h1><p>View real photographs, location, deity, history and available services.</p></div><div className="temple-grid">{temples.map(t=><article className="temple-card" key={t.id}><img src={t.image} alt={t.name}/><div className="card-body"><span className="mini-label">{t.deity}</span><h3>{t.name}</h3><p>{t.location}</p><Link className="btn small" to={`/temple/${t.id}`}>View Details</Link></div></article>)}</div></section>}
