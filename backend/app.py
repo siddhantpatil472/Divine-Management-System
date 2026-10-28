@@ -315,6 +315,21 @@ def create_notification(
 # HEALTH AND TEMPLES
 # --------------------------------------------------
 
+@app.route("/", methods=["GET", "HEAD"])
+def root():
+    return jsonify({
+        "status": "healthy",
+        "service": "Divine Temple Management API"
+    }), 200
+
+
+@app.route("/health", methods=["GET", "HEAD"])
+def root_health():
+    return jsonify({
+        "status": "healthy"
+    }), 200
+
+
 @app.get("/api/health")
 def health():
     conn = None
