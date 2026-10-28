@@ -1352,10 +1352,14 @@ def not_found(_):
 # START SERVER
 # --------------------------------------------------
 
-if __name__ == "__main__":
+try:
     ensure_database()
+except Exception:
+    pass
+
+if __name__ == "__main__":
     app.run(
-        host="127.0.0.1",
+        host="0.0.0.0",
         port=int(os.getenv("PORT", "5000")),
         debug=True,
     )
